@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mady Musics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-headphones-simple"></i>
+                <span>Mady Musics</span>
+            </div>
+
+            <nav>
+                <ul>
+                    <li class="active"><a href="#"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i> Search</a></li>
+                    <li><a href="#"><i class="fa-solid fa-book"></i> Your Library</a></li>
+                </ul>
+            </nav>
+
+            <div class="playlist-section">
+                <h3>PLAYLISTS</h3>
+                <div class="create-playlist">
+                    <div class="icon-box"><i class="fa-solid fa-plus"></i></div>
+                    <span>Create Playlist</span>
+                </div>
+                <div class="liked-songs">
+                    <div class="icon-box gradient-bg"><i class="fa-solid fa-heart"></i></div>
+                    <span>Liked Songs</span>
+                </div>
+                <ul class="playlist-list">
+                    <li>Chill Vibes</li>
+                    <li>Top Hits 2024</li>
+                    <li>Tamil Melodies</li>
+                    <li>Workout Mix</li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="nav-arrows">
+                    <button><i class="fa-solid fa-chevron-left"></i></button>
+                    <button><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+                <div class="user-profile">
+                    <button class="upgrade-btn">Explore Premium</button>
+                    <div class="avatar"><i class="fa-solid fa-user"></i></div>
+                </div>
+            </header>
+
+            <div class="content-padding">
+                <div class="hero-banner">
+                    <div class="hero-image">
+                        <img src="" id="hero-img" alt="Featured Album" style="display: none;">
+                        <div class="fallback-hero-icon" id="hero-icon"><i class="fa-solid fa-music"></i></div>
+                    </div>
+                    <div class="hero-text">
+                        <span class="sub-text">PLAYLIST</span>
+                        <h1 id="greeting">Good Evening</h1>
+                        <p class="desc">Your daily mix of fresh tracks and timeless classics.</p>
+                        <div class="hero-buttons">
+                            <button class="play-btn-large" id="main-play-btn"><i class="fa-solid fa-play"></i></button>
+                            <button class="like-btn-large"><i class="fa-regular fa-heart"></i></button>
+                            <button class="more-btn"><i class="fa-solid fa-ellipsis"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <section class="song-list-container">
+                    <div class="list-header">
+                        <div class="col-index">#</div>
+                        <div class="col-title">Title</div>
+                        <div class="col-album">Album</div>
+                        <div class="col-date">Date Added</div>
+                        <div class="col-duration"><i class="fa-regular fa-clock"></i></div>
+                    </div>
+                    <hr>
+                    <div class="songs-list" id="songs-list">
+                        <!-- Songs will be injected here via JS -->
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Player Bar -->
+        <footer class="player-bar">
+            <div class="player-left">
+                <img src="" alt="Cover" id="current-cover" class="cover-img">
+                <div class="track-info">
+                    <h4 id="current-title">Song Title</h4>
+                    <p id="current-artist">Artist Name</p>
+                </div>
+                <button class="like-btn-small"><i class="fa-regular fa-heart"></i></button>
+            </div>
+
+            <div class="player-center">
+                <div class="controls">
+                    <button id="shuffle-btn"><i class="fa-solid fa-shuffle"></i></button>
+                    <button id="prev-btn"><i class="fa-solid fa-backward-step"></i></button>
+                    <button id="play-pause-btn" class="main-control"><i class="fa-solid fa-play"></i></button>
+                    <button id="next-btn"><i class="fa-solid fa-forward-step"></i></button>
+                    <button id="repeat-btn"><i class="fa-solid fa-repeat"></i></button>
+                </div>
+                <div class="progress-container">
+                    <span id="current-time">0:00</span>
+                    <div class="progress-bar-wrapper" id="progress-container">
+                        <div class="progress-bar" id="progress-bar">
+                            <div class="progress-thumb"></div>
+                        </div>
+                    </div>
+                    <span id="total-duration">0:00</span>
+                </div>
+            </div>
+
+            <div class="player-right">
+                <button><i class="fa-solid fa-microphone"></i></button>
+                <button><i class="fa-solid fa-list"></i></button>
+                <button><i class="fa-solid fa-computer"></i></button>
+                <div class="volume-container">
+                    <button id="mute-btn"><i class="fa-solid fa-volume-high"></i></button>
+                    <div class="volume-bar-wrapper" id="volume-container">
+                        <div class="volume-bar" id="volume-bar"></div>
+                    </div>
+                </div>
+                <button><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
